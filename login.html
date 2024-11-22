@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background: url('background.jpg') no-repeat center center fixed;
+                background-size: cover;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                font-family: arial;
+                height: 100vh;
+            }
+            .container {
+                text-align: center;
+            }
+            h1 {
+                color: white;
+                font-weight: bold;
+                margin: 20px 0px;
+                font-style: italic;
+                font-size: 50px;
+            }
+            .login {
+                display: flex;
+                border: 3px solid white;
+                box-shadow: white 1px 1px 10px 1px;
+                flex-direction: column;
+                padding: 20px;
+                width: 600px;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+            }
+            input {
+                height: 50px;
+                padding: 10px;
+                margin: 5px 0px;
+                background-color: transparent;
+                border: 1px solid rgb(0, 0, 0);
+                color: rgb(0, 0, 0);
+            }
+            .btn1 {
+                color: white;
+                background-color: burlywood;
+                font-weight: bold;
+                height: 50px;
+                padding: 10px;
+                margin: 5px 0px;
+                border: none;
+                border-radius: 10px;
+            }
+            .p1 {
+                color: burlywood;
+            }
+            .p2 {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p class="p2" id="a" class="a"></p>
+            <h1>AETHERBREW</h1>
+            <div class="login">
+                <p class="p1">LOGIN TO AETHERBREW</p>
+                <input type="email" id="email" placeholder="Enter username">
+                <input type="password" id="password" placeholder="Enter password">
+                <button class="btn1" onclick="group4()">LOG IN</button>
+            </div>
+        </div>
+        <script>
+            function group4() {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                const x = "aetherbrew@gmail.com";
+                const y = "aetherbrew2024";
+                const a = document.getElementById("a");
+                if (email === x && password === y) {
+                    a.textContent = "Logging In...";
+                    a.style.color = "lime";
+                    location.href="home.html";
+                } else if (email === "" && password === "") {
+                    a.textContent = "Please enter your username and password";
+                    a.style.color = "red";
+                } else if (email === "") {
+                    a.textContent = "Please enter your username.";
+                    a.style.color = "red";
+                } else if (password === "") {
+                    a.textContent = "Please enter your password.";
+                    a.style.color = "red";
+            } else {
+                a.textContent = "Invalid username or Incorrect password.";
+                a.style.color = "red";
+            }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AetherBrew Menu</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        grid-gap: 100px;
+        width: 100%;
+      }
+      nav a {
+        color: #e5e5cb;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: burlywood;
+      }
+      .container {
+        text-align: center;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        max-width: 800px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        color: #e5e5cb;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 200px;
+        display: grid;
+      }
+      
+      .button:hover {
+        background-color: burlywood;
+        color: #3c2f2f;
+        transform: scale(1.05);
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #bfa58d;
+      }
+      button{
+        color: white;
+        background-color: transparent;
+        height: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid white;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      button:hover {
+        border: 2px solid white;
+        background-color: dimgray;
+        color: burlywood;
+      }
+      ul {
+        color: burlywood;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="developers.html">Developers</a>
+        <a href="order-now.html">Order now</a>
+      </nav>
+      <div class="container">
+        <h1>AetherBrew Menu</h1>
+        <div class="menu">
+            <button onclick="btn1()">Espresso</button>
+            <ul id="list1"></ul>
+            <button onclick="btn2()">Americano</button>
+            <ul id="list2"></ul>
+            <button onclick="btn3()">Cappuccino</button>
+            <ul id="list3"></ul>
+            <button onclick="btn4()">Latte</button>
+            <ul id="list4"></ul>
+            <button onclick="btn5()">Cafe Macchiato</button>
+            <ul id="list5"></ul>
+            <button onclick="btn6()">Ice Coffee</button>
+            <ul id="list6"></ul>
+            <button onclick="btn7()">Frappe</button>
+            <ul id="list7"></ul>
+        </div>
+      </div>
+      <footer>&copy; 2024 AetherBrew. All rights reserved.</footer>
+      <script>
+        let isVisible = false;
+        function btn1() {
+            const espresso = ["Small - 60 pesos", "Medium - 75 pesos", "Large - 90 pesos"];
+            const list1 = document.getElementById("list1");
+            if (!isVisible) {
+                list1.innerHTML = "";
+                for (let i = 0; i < espresso.length; i++) {
+                    let item = document.createElement("li");
+                    item.textContent = `${i+1}. ${espresso[i]}`;
+                    list1.appendChild(item);
+                }
+                isVisible = true
+            } else {
+                list1.innerHTML = "";
+                isVisible = false;
+            }
+        }
+
+        function btn2() {
+            const americano = ["Small - 50 pesos", "Medium - 65 pesos", "Large - 80 pesos"];
+            const list2 = document.getElementById("list2");
+            if (!isVisible) {
+                list2.innerHTML = "";
+                for (let i = 0; i < americano.length; i++) {
+                    let item = document.createElement("li");
+                    item.textContent = `${i+1}. ${americano[i]}`;
+                    list2.appendChild(item);
+                }
+                isVisible = true
+            } else {
+                list2.innerHTML = "";
+                isVisible = false;
+            }
+        }
+
+        function btn3() {
+            const cappuccino = ["Small - 50 pesos", "Medium - 65 pesos", "Large - 80 pesos"];
+            const list3 = document.getElementById("list3");
+            if (!isVisible) {
+                list3.innerHTML = "";
+                for (let i = 0; i < cappuccino.length; i++) {
+                    let item = document.createElement("li");
+                    item.textContent = `${i+1}. ${cappuccino[i]}`;
+                    list3.appendChild(item);
+                }
+                isVisible = true
+            } else {
+                list3.innerHTML = "";
+                isVisible = false;
+            }
+        }
+
+        function btn4() {
+            const latte = ["Small - 50 pesos", "Medium - 65 pesos", "Large - 80 pesos"];
+            const list4 = document.getElementById("list4");
+            if (!isVisible) {
+                list4.innerHTML = "";
+                for (let i = 0; i < latte.length; i++) {
+                    let item = document.createElement("li");
+                    item.textContent = `${i+1}. ${latte[i]}`;
+                    list4.appendChild(item);
+                }
+                isVisible = true
+            } else {
+                list4.innerHTML = "";
+                isVisible = false;
+            }
+        }
+
+        function btn5() {
+            const macchiato = ["Small - 65 pesos", "Medium - 80 pesos", "Large - 95 pesos"];
+            const list5 = document.getElementById("list5");
+            if (!isVisible) {
+                list5.innerHTML = "";
+                for (let i = 0; i < macchiato.length; i++) {
+                    let item = document.createElement("li");
+                    item.textContent = `${i+1}. ${macchiato[i]}`;
+                    list5.appendChild(item);
+                }
+                isVisible = true
+            } else {
+                list5.innerHTML = "";
+                isVisible = false;
+            }
+        }
+
+        function btn6() {
+            const ice = ["Small - 60 pesos", "Medium - 75 pesos", "Large - 90 pesos"];
+            const list6 = document.getElementById("list6");
+            if (!isVisible) {
+                list5.innerHTML = "";
+                for (let i = 0; i < ice.length; i++) {
+                    let item = document.createElement("li");
+                    item.textContent = `${i+1}. ${ice[i]}`;
+                    list6.appendChild(item);
+                }
+                isVisible = true
+            } else {
+                list6.innerHTML = "";
+                isVisible = false;
+            }
+        }
+
+        function btn7() {
+            const frappe = ["Small - 60 pesos", "Medium - 75 pesos", "Large - 90 pesos"];
+            const list7 = document.getElementById("list7");
+            if (!isVisible) {
+                list5.innerHTML = "";
+                for (let i = 0; i < frappe.length; i++) {
+                    let item = document.createElement("li");
+                    item.textContent = `${i+1}. ${frappe[i]}`;
+                    list7.appendChild(item);
+                }
+                isVisible = true
+            } else {
+                list7.innerHTML = "";
+                isVisible = false;
+            }
+        }
+      </script>
+  </body>
+</html>

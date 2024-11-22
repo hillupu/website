@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AetherBrew Home</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        grid-gap: 100px;
+        width: 100%;
+      }
+      nav a {
+        color: #e5e5cb;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: burlywood;
+      }
+      .hero {
+        text-align: center;
+        margin-top: 5px;
+        padding: 50px 20px;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #ffffff;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        margin: 10px;
+        background-color: burlywood;
+        color: #000;
+        font-weight: bold;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #fff;
+      }
+      .container, .secondcontainer {
+        text-align: center;
+        margin: 50px auto;
+      }
+      .container img, .secondcontainer img {
+        border-radius: 50px;
+        height: 300px;
+        margin-bottom: 50px;
+        transition: border 0.3s ease;
+      }
+      .container img:hover, .secondcontainer img:hover {
+        border: 5px solid burlywood;
+      }
+      .featured-section, .testimonial-section, .sustainability-section {
+        text-align: center;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      .featured-section .products, .testimonial-section .testimonials {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .featured-section .products div, .testimonial-section .testimonials div {
+        max-width: 300px;
+        padding: 10px;
+        text-align: center;
+      }
+      .featured-section img, .testimonial-section div {
+        border-radius: 15px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        width: 100%;
+      }
+      .testimonial-section .testimonials div {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        color: #000;
+        text-align: left;
+      }
+      .testimonial-section .testimonials p {
+        margin: 10px 0;
+      }
+      .featured-section .products img {
+        border-radius: 15px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .featured-section .products img:hover {
+        transform: scale(1.1); /* Zoom in */
+        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.7); /* Add deeper shadow */
+      }
+      .featured-section .products div {
+        text-align: center;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .featured-section .products div:hover {
+        transform: translateY(-10px); /* Slight lift effect */
+        color: rgb(255, 194, 114);
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #bfa58d;
+      }
+      footer a {
+        margin: 0 10px;
+        color: #e5e5cb;
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="home.html">Home</a>
+      <a href="developers.html">Developers</a>
+      <a href="order-now.html">Order Now</a>
+    </nav>
+
+    <div class="hero">
+      <h1>Welcome to AetherBrew</h1>
+      <p>
+        Experience coffee like never before. Carefully sourced beans, masterfully roasted, 
+        and brewed to perfection just for you.
+      </p>
+      <a class="btn" href="menu.html">View Menu</a>
+      <a class="btn" href="order-now.html">Order Now</a>
+    </div>
+
+    <div class="container">
+      <img class="espresso" src="espresso.jpg" alt="Espresso">
+      <img class="cafe" src="cafe.jpg" alt="Café">
+      <img class="cap" src="cap.jpg" alt="Cappuccino">
+    </div>
+
+    <div class="secondcontainer">
+      <img class="cup" src="cup.jpg" alt="Cup">
+      <img class="cup-with-face" src="cup-with-face.jpg" alt="Cup with Face">
+      <img class="white-cup" src="white-cup.jpg" alt="White Cup">
+    </div>
+
+    <div class="featured-section">
+      <h2>Customer Favorites</h2>
+      <div class="products">
+        <div>
+          <img src="classic latte.jpg" alt="Latte">
+          <p>Classic Latte</p>
+        </div>
+        <div>
+          <img src="mocha frappe.jpg" alt="Mocha">
+          <p>Mocha Frappe</p>
+        </div>
+        <div>
+          <img src="bold espresso.jpg" alt="Espresso">
+          <p>Bold Espresso</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-section">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonials">
+        <div>
+          <p>"The best coffee I've ever had! The ambiance is perfect, and the staff is so friendly."</p>
+          <p>- Sarah J.</p>
+        </div>
+        <div>
+          <p>"AetherBrew’s sustainable practices make every cup more meaningful. Love it!"</p>
+          <p>- John D.</p>
+        </div>
+        <div>
+          <p>"Every visit to AetherBrew feels like a warm embrace. The coffee is exceptional!"</p>
+          <p>- Emily R.</p>
+        </div>
+        <div>
+          <p>"I can't start my day without AetherBrew's mocha frappe. It's simply the best!"</p>
+          <p>- Mark T.</p>
+        </div>
+      </div>
+    </div>    
+    <footer>&copy; 2024 AetherBrew. All rights reserved.</footer>
+  </body>
+</html>
